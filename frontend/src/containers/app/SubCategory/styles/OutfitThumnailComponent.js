@@ -1,17 +1,18 @@
 import styled from "styled-components";
 
-export const OutfitThumbnailContainer = styled.div`
+export const OutfitThumbnailContainer = styled.a`
 display: flex;
 flex-direction: column;
 width: 250px;
 height: 350px;
 justify-content: center;
+color: #000;
 `;
 
 export const OutfitThumbnail = styled.img`
 width: 250px;
-overflow: hidden;
 height: 250px;
+object-fit: cover;
 `;
 
 export const SubCategoryTitle = styled.div`
