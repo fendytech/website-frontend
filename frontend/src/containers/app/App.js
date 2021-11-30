@@ -10,6 +10,7 @@ import Navbar from "../../components/navbar/Navbar";
 import HomeScreen from "../HomeScreen";
 import { Login } from "../../components/login-signup/login";
 import Category from "../../components/category-finder/Category";
+import SubCategoryScreen from "./SubCategory/SubCategory";
 // import ProductScreen from "../ProductScreen";
 // import CartScreen from "../CartScreen";
 
@@ -30,6 +31,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={HomeScreen} />
           <Route exact path="/login" component={Login} />
+          <Route exact path='/subcategory' component={SubCategoryScreen}/>
           {/* <Route exact path="/product/:id" component={ProductScreen} />
           <Route exact path="/cart" component={CartScreen} /> */}
         </Switch>
