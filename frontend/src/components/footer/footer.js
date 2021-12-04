@@ -1,10 +1,11 @@
+import { forwardRef } from "react";
 import styled from "styled-components";
 
-const Footer = () => {
+const Footer = forwardRef((props, ref) => {
 
     return (
         <>
-            <div style={{ display: "flex" }}>
+            <div ref={ref} style={{ display: "flex" }}>
                 <div>
                     <div> Online Shopping </div>
                     <div> Men </div>
@@ -23,6 +24,6 @@ const Footer = () => {
             </div>
         </>
     );
-}
+});
 
 export default Footer

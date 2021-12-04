@@ -5,26 +5,20 @@ import Navbar from "../../components/navbar/Navbar";
 
 import './home.scss';
 
-const Home = () => {
+const urlsList = ["https://picsum.photos/200/300", "https://picsum.photos/200/300?grayscale", "https://picsum.photos/id/237/200/300", "https://picsum.photos/id/0/200/300"];
 
+const Home = () => {
     return (
         <>
             <Navbar />
             <TopNavigation />
             <div className={'home_screen_carousel'}>
-                <Carousel effect="fade">
-                    <div>
-                        <h3>1</h3>
-                    </div>
-                    <div>
-                        <h3>2</h3>
-                    </div>
-                    <div>
-                        <h3>3</h3>
-                    </div>
-                    <div>
-                        <h3>4</h3>
-                    </div>
+                <Carousel effect="fade" autoplay autoplaySpeed={1000} >
+                    {
+                        urlsList?.length > 0 && urlsList.map((url, urlIndex) =>
+                            <img src={url} key={urlIndex} alt="banner" className="banner-image" />
+                        )
+                    }
                 </Carousel>
             </div>
         </>

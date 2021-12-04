@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "../home/home";
@@ -7,18 +8,30 @@ import SubCategoryScreen from "../app/SubCategory/SubCategory";
 // import CartScreen from "../CartScreen";
 
 const Main = () => {
-    return (
-        <section style={{ height: '100vh', background: 'white' }}>
-            <Router>
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path='/subcategory' component={SubCategoryScreen} />
-                    {/* <Route exact path="/product/:id" component={ProductScreen} />
-                    <Route exact path="/cart" component={CartScreen} /> */}
-                </Switch>
-            </Router>
+    const footerRef = useRef();
+    const [footerHeight, setFooterHeight] = useState(100);
 
-            <Footer/>
+    useEffect(() => {
+        if (footerRef.current?.clientHeight) {
+            setFooterHeight(footerRef.current.clientHeight)
+        }
+    }, [footerRef.current]);
+
+    console.log(footerHeight);
+
+    return (
+        <section style={{ height: '100vh', background: 'white', overflow: 'auto' }}>
+            <div style={{ minHeight: `calc(100% - ${footerHeight}px)` }}>
+                <Router>
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route exact path='/subcategory' component={SubCategoryScreen} />
+                        {/* <Route exact path="/product/:id" component={ProductScreen} />
+                    <Route exact path="/cart" component={CartScreen} /> */}
+                    </Switch>
+                </Router>
+            </div>
+            <Footer ref={footerRef} />
         </section>
     );
 }
