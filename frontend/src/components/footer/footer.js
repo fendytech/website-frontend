@@ -5,7 +5,7 @@ const Footer = forwardRef((props, ref) => {
 
     return (
         <>
-            <div ref={ref} style={{ display: "flex" }}>
+            <div ref={ref} style={{ display: "flex", justifyContent: "space-around" }}>
                 <div>
                     <div> Online Shopping </div>
                     <div> Men </div>
