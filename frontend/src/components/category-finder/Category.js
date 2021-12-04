@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import React from 'react';
-import img from '../../assets/images/men.png'
 
 const Image = styled.img`
 border-radius: 50%; 
@@ -24,10 +23,8 @@ const Category = ({image,text}) => {
 
     return (
         <Div>
-        <Image src={img}/>
-        <Textpara> Men </Textpara>  
-        <Image src={img}/>
-        <Textpara> Men </Textpara>  
+        <Image src={image}/>
+        <Textpara> {text} </Textpara>  
         </Div>
     );
 };
