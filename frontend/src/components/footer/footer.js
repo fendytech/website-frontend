@@ -1,25 +1,27 @@
 import { forwardRef } from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
+
+import "./footer.scss";
 
 const Footer = forwardRef((props, ref) => {
 
     return (
         <>
-            <div ref={ref} style={{ display: "flex", justifyContent: "space-around" }}>
+            <div ref={ref} className="footer">
                 <div>
-                    <div> Online Shopping </div>
+                    <h2> Online Shopping </h2>
                     <div> Men </div>
                     <div> Women </div>
                     <div> Kids </div>
                 </div>
                 <div>
-                    <div> Online Shopping </div>
-                    <div> Men </div>
-                    <div> Women </div>
-                    <div> Kids </div>
+                    <h2>Useful Links</h2>
+                    <div> FAQS </div>
+                    <div> Privacy Policy </div>
+                    <div> Terms & Conditions </div>
                 </div>
                 <div>
-                    <div> Follow us </div>
+                    <h2> Follow us </h2>
                 </div>
             </div>
         </>
