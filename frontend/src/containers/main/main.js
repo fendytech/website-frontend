@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import SubCategoryScreen from "../app/SubCategory/SubCategory";
 
 import Home from "../home/home";
+import Footer from "../../components/footer/footer";
+import SubCategoryScreen from "../app/SubCategory/SubCategory";
 // import ProductScreen from "../ProductScreen";
 // import CartScreen from "../CartScreen";
 
@@ -16,6 +17,8 @@ const Main = () => {
                     <Route exact path="/cart" component={CartScreen} /> */}
                 </Switch>
             </Router>
+
+            <Footer/>
         </section>
     );
 }

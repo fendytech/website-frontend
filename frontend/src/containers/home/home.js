@@ -1,7 +1,6 @@
 import { Carousel } from 'antd';
 
 import TopNavigation from "../../components/category-finder/TopNavigation";
-import Footer from '../../components/footer/footer';
 import Navbar from "../../components/navbar/Navbar";
 
 import './home.scss';
@@ -28,7 +27,6 @@ const Home = () => {
                     </div>
                 </Carousel>
             </div>
-            <Footer/>
         </>
 
     );
