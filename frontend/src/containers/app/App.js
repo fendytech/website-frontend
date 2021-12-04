@@ -15,6 +15,7 @@ import SubCategoryScreen from "./SubCategory/SubCategory";
 
 const Main = styled.section`
 height: 100vh;
+background: white;
 `;
 
 function App() {

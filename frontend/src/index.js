@@ -1,11 +1,12 @@
+import 'antd/dist/antd.css';
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "../src/containers/app/App";
-import reportWebVitals from "./reportWebVitals";
-
 import { Provider } from "react-redux";
+
 import store from "./redux/store";
+import App from "./containers/app/App";
+import reportWebVitals from "./reportWebVitals";
+import './styles/main.scss?global';
 
 ReactDOM.render(
   <Provider store={store}>

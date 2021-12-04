@@ -1,0 +1,15 @@
+.home_screen_carousel {
+    .ant-carousel .slick-dots li button {
+        background: #c4c4c4;
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+        border-radius: 50%;
+    }
+
+    .ant-carousel .slick-dots li.slick-active button {
+        width: 12px;
+        height: 12px;
+        background: #f32929;
+    }
+}

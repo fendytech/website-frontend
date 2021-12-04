@@ -1,33 +1,32 @@
+import { Carousel } from 'antd';
+
 import TopNavigation from "../../components/category-finder/TopNavigation";
 import Navbar from "../../components/navbar/Navbar";
-import { Carousel } from 'antd';
-import styled from 'styled-components';
 
-const ContentStyle = styled.h3 `
-    
-  `;
+import './home.scss';
 
 const Home = () => {
-
 
     return (
         <>
             <Navbar />
             <TopNavigation />
-            <Carousel effect="fade">
-                <div>
-                    <ContentStyle>1</ContentStyle>
-                </div>
-                <div>
-                    <ContentStyle>2</ContentStyle>
-                </div>
-                <div>
-                    <ContentStyle>3</ContentStyle>
-                </div>
-                <div>
-                    <ContentStyle>4</ContentStyle>
-                </div>
-            </Carousel>
+            <div className={'home_screen_carousel'}>
+                <Carousel effect="fade">
+                    <div>
+                        <h3>1</h3>
+                    </div>
+                    <div>
+                        <h3>2</h3>
+                    </div>
+                    <div>
+                        <h3>3</h3>
+                    </div>
+                    <div>
+                        <h3>4</h3>
+                    </div>
+                </Carousel>
+            </div>
         </>
 
     );
