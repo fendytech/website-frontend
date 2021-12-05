@@ -6,6 +6,7 @@ import Footer from "../../components/footer/footer";
 import SubCategoryScreen from "../app/SubCategory/SubCategory";
 import Navbar from "../../components/navbar/Navbar";
 import ProductDetail from "../product/product-detail";
+import ProductComponent from "../../components/product-component/ProductComponent";
 // import ProductScreen from "../ProductScreen";
 // import CartScreen from "../CartScreen";
 
@@ -28,8 +29,7 @@ const Main = () => {
                         <Route exact path="/" component={Home} />
                         <Route exact path='/subcategory' component={SubCategoryScreen} />
                         <Route exact path='/product-detail/:id' component={ProductDetail} />
-                        {/* <Route exact path="/product/:id" component={ProductScreen} />
-                    <Route exact path="/cart" component={CartScreen} /> */}
+                        <Route exact path="/product/:id" component={ProductComponent} />
                     </Switch>
                 </Router>
             </div>
