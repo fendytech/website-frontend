@@ -11,9 +11,9 @@ const Home = () => {
     return (
         <>
             <TopNavigation />
-                <div className={'home_screen_carousel'}>
-                <Carousel effect="fade" autoplay autoplaySpeed={60000} >
-                {
+            <div className={'home_screen_carousel'}>
+                <Carousel effect="fade" autoplay autoplaySpeed={100000} >
+                    {
                         urlsList?.length > 0 && urlsList.map((url, urlIndex) =>
                             <img src={url} key={urlIndex} alt="banner" className="banner-image" />
                     )
