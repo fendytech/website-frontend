@@ -1,6 +1,7 @@
 import { Carousel } from 'antd';
 
 import TopNavigation from "../../components/category-finder/TopNavigation";
+import Navbar from "../../components/navbar/Navbar";
 
 import './home.scss';
 
@@ -10,13 +11,13 @@ const Home = () => {
     return (
         <>
             <TopNavigation />
-            <div className={'home_screen_carousel'}>
-                <Carousel effect="fade" autoplay autoplaySpeed={1000} >
-                    {
+                <div className={'home_screen_carousel'}>
+                <Carousel effect="fade" autoplay autoplaySpeed={60000} >
+                {
                         urlsList?.length > 0 && urlsList.map((url, urlIndex) =>
                             <img src={url} key={urlIndex} alt="banner" className="banner-image" />
-                        )
-                    }
+                    )
+                }
                 </Carousel>
             </div>
         </>
