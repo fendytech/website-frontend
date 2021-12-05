@@ -1,7 +1,6 @@
 import { Carousel } from 'antd';
 
 import TopNavigation from "../../components/category-finder/TopNavigation";
-import Navbar from "../../components/navbar/Navbar";
 
 import './home.scss';
 
@@ -10,7 +9,6 @@ const urlsList = ["https://picsum.photos/200/300", "https://picsum.photos/200/30
 const Home = () => {
     return (
         <>
-            <Navbar />
             <TopNavigation />
             <div className={'home_screen_carousel'}>
                 <Carousel effect="fade" autoplay autoplaySpeed={1000} >

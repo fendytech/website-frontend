@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "../home/home";
 import Footer from "../../components/footer/footer";
 import SubCategoryScreen from "../app/SubCategory/SubCategory";
+import Navbar from "../../components/navbar/Navbar";
+import ProductDetail from "../product/product-detail";
 // import ProductScreen from "../ProductScreen";
 // import CartScreen from "../CartScreen";
 
@@ -15,17 +17,17 @@ const Main = () => {
         if (footerRef.current?.clientHeight) {
             setFooterHeight(footerRef.current.clientHeight)
         }
-    }, [footerRef.current]);
-
-    console.log(footerHeight);
+    }, [footerRef.current?.clientHeight]);
 
     return (
         <section style={{ height: '100vh', background: 'white', overflow: 'auto' }}>
             <div style={{ minHeight: `calc(100% - ${footerHeight}px)` }}>
+                <Navbar />
                 <Router>
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route exact path='/subcategory' component={SubCategoryScreen} />
+                        <Route exact path='/product-detail/:id' component={ProductDetail} />
                         {/* <Route exact path="/product/:id" component={ProductScreen} />
                     <Route exact path="/cart" component={CartScreen} /> */}
                     </Switch>

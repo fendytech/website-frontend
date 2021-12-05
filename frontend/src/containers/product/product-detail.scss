@@ -1,0 +1,23 @@
+.product-detail {
+    display: flex;
+    padding: 30px 20px;
+
+    .product-left-section {
+        width: 60%;
+
+        .product-img {
+            padding: 0 15px 15px 15px;
+            max-height: 500px;
+            object-fit: cover;
+        }
+    }
+
+    .product-right-section {
+        width: 40%;
+        padding: 0 15px 15px 15px;
+
+        .product-title {
+            font-size: 21px;
+        }
+    }
+}
