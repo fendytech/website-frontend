@@ -1,4 +1,4 @@
-import { Button, Carousel } from "antd";
+import { Button } from "antd";
 import { useState } from "react";
 import "./product-detail.scss";
 

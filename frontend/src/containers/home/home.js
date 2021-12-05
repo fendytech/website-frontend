@@ -1,8 +1,6 @@
 import { Carousel } from 'antd';
 
 import TopNavigation from "../../components/category-finder/TopNavigation";
-import Navbar from "../../components/navbar/Navbar";
-
 import './home.scss';
 
 const urlsList = ["https://picsum.photos/200/300", "https://picsum.photos/200/300?grayscale", "https://picsum.photos/id/237/200/300", "https://picsum.photos/id/0/200/300"];
