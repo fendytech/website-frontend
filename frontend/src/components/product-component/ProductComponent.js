@@ -1,5 +1,4 @@
 import { Icon, Rate } from "antd";
-import ReactStars from "react-rating-stars-component";
 
 const ProductComponent = () => {
     return (
