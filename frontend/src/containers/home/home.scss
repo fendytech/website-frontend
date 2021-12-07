@@ -1,0 +1,29 @@
+.home_screen_carousel {
+    .ant-carousel .slick-dots li button {
+        background: #c4c4c4;
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+        border-radius: 50%;
+    }
+
+    .ant-carousel .slick-dots li.slick-active button {
+        width: 10px;
+        height: 10px;
+        background: #f32929;
+    }
+
+    .ant-carousel .slick-slider .slick-list {
+        margin-bottom: 30px;
+    }
+
+    .ant-carousel .slick-dots-bottom {
+        bottom: -20px;
+        height: 10px;    
+    }
+}
+
+.banner-image {
+    height: 200px;
+    object-fit: cover;
+}
