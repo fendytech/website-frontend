@@ -1,0 +1,9 @@
+.left {  
+    width: 50%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.right {
+    width: 50%;
+}
