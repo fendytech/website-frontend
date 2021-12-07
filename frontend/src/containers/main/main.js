@@ -7,6 +7,7 @@ import SubCategoryScreen from "../app/SubCategory/SubCategory";
 import Navbar from "../../components/navbar/Navbar";
 import ProductDetail from "../product/product-detail";
 import ProductComponent from "../../components/product-component/ProductComponent";
+import Cart from "../cart/cart";
 // import ProductScreen from "../ProductScreen";
 // import CartScreen from "../CartScreen";
 
@@ -22,7 +23,7 @@ const Main = () => {
 
     return (
         <section style={{ height: '100vh', background: 'white', overflow: 'auto' }}>
-            <div style={{ minHeight: `calc(100% - ${footerHeight}px)` }}>
+            <div style={{ minHeight: `calc(100% - ${footerHeight}px)`, overflow: 'auto' }}>
                 <Navbar />
                 <Router>
                     <Switch>
@@ -30,6 +31,7 @@ const Main = () => {
                         <Route exact path='/subcategory' component={SubCategoryScreen} />
                         <Route exact path='/product-detail/:id' component={ProductDetail} />
                         <Route exact path="/product/:id" component={ProductComponent} />
+                        <Route exact path="/cart" component={Cart} />
                     </Switch>
                 </Router>
             </div>
